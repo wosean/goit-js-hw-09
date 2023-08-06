@@ -17,9 +17,9 @@ body {
 img {
   display: block;
   max-width: 100%;
-}
+} 
 
-#datetime-picker {
+ #datetime-picker {
   box-sizing: border-box;
   font-size: large;
   font-weight: bold;
