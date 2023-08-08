@@ -26,12 +26,14 @@ btnCreatePromise.addEventListener('click', e => {
   e.preventDefault();
   let firstDelay = Number(delay.value);
   let delayStep = Number(step.value);
+
   if (firstDelay < 0 || delayStep < 0 || amount.value <= 0) {
-    Notiflix.Notify.info(
-      `Incorrect parametrs: ${delay}, ${step}ms, ${amount} `
+    Notiflix.Notify.info(`❌ Error! Number must be greater than 0!
+      Incorrect parametrs: ${firstDelay}ms, ${delayStep}ms, ${amount.value} `       
     );
     return;
-      }  
+  } 
+  
   for (let i = 0; i < amount.value; i++) {
     createPromise(1 + i, firstDelay + i * delayStep)
       .then(({ position, delay }) => {
